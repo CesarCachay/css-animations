@@ -1,0 +1,121 @@
+.button {
+  width: 300px;
+  border: none;
+  padding: 30px;
+  font-size: larger;
+  font-weight: 500;
+  position: relative;
+}
+
+.button:before {
+  content: "";
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+
+.button:hover::before{
+  background: blue;
+  left: 0%;
+  width: 100%;
+}
+
+.bounce {
+  margin-top: 20px;
+  width: 300px;
+  border: none;
+  padding: 40px;
+  font-size: x-large;
+  font-weight: 500;
+  position: relative;
+}
+
+.bounce span {
+  height: 100%;
+  position: absolute;
+  background: red;
+  left: 0;
+  width: 0%;
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-out;
+  top: 0;
+}
+
+.bounce:hover span {
+  background: red;
+  right: 100%;
+  width: 100%;
+}
+
+.bounce div {
+  position: relative;
+}
+
+.bounce:hover div {
+  color: white;
+}
+
+@keyframes buzzout {
+  from {
+    
+    transform: rotate(3deg);
+  }
+
+  to {
+    
+    transform: rotate(-3deg);
+  }
+}
+
+.buzz {  
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 260px;
+  border: none;
+  padding: 50px;
+  font-size: xx-large;
+  font-weight: 500;
+  position: relative;
+}
+
+.buzz:hover {
+  animation-name: buzzout;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes scale {
+  from {
+    
+    transform: scale(1.15, 0.9);
+  }
+
+  to {
+    
+    /* transform: scale(0.5, 1.5); */
+  }
+}
+
+.bouncein {
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 260px;
+  border: none;
+  padding: 50px;
+  font-size: xx-large;
+  font-weight: 500;
+  position: relative;
+}
+
+.bouncein:hover {
+  animation-name: scale;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: 23;
+}
